@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>378</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="te_name_host">
+     <property name="text">
+      <string>Имя хоста:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="ed_name_host"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="te_name_db">
+     <property name="text">
+      <string>Имя БД</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="ed_name_db"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="te_login">
+     <property name="text">
+      <string>Логин</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="ed_login"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="te_pass">
+     <property name="text">
+      <string>Пароль</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="ed_pass"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="te_port">
+     <property name="text">
+      <string>Порт подключения к БД</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="ed_port"/>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="button_ok">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_ok</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_ok</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>te_name_host</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>ed_name_host</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>60</x>
+     <y>47</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>te_name_db</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>ed_name_db</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>118</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>te_login</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>ed_login</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>te_pass</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>ed_pass</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>te_port</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>ed_port</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
